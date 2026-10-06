@@ -6,12 +6,14 @@ public abstract class Pessoa {
     private int id;
     private String nome;
     private LocalDate dataNascimento;
+
     //construtor
     public Pessoa(int id, String nome, LocalDate dataNascimento) {
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
     }
+
     //getters
     public int getId() {
         return id;
@@ -22,6 +24,7 @@ public abstract class Pessoa {
     public LocalDate getDataNascimento() {
         return dataNascimento;
     }
+
     //setters
     public void setId(int id) {
         this.id = id;
@@ -32,8 +35,7 @@ public abstract class Pessoa {
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
+    
     //toString
-    public void exibirResumo() {
-        System.out.println("Nome:" + this.nome + " | Id: " + this.id + " | Data de Nascimento: " + this.dataNascimento);
-    }
+    public abstract String exibirResumo();
 }

@@ -5,6 +5,7 @@ public class InstrumentoDeRisada {
     private double valor;
     private String nome;
     private String descricao;
+
     //construtor
     public InstrumentoDeRisada(int id, double valor, String nome, String descricao) {
         this.id = id;
@@ -12,6 +13,7 @@ public class InstrumentoDeRisada {
         this.nome = nome;
         this.descricao = descricao;
     }
+
     //getters
     public int getId() {
         return id;
@@ -25,6 +27,7 @@ public class InstrumentoDeRisada {
     public String getDescricao() {
         return descricao;
     }
+    
     //setters
     public void setId(int id) {
         this.id = id;
@@ -38,6 +41,4 @@ public class InstrumentoDeRisada {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
-    
 }
