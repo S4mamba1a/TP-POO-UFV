@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema ultimarisada
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema ultimarisada
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `ultimarisada` DEFAULT CHARACTER SET utf8 ;
+USE `ultimarisada` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`PALHACO`
+-- Table `ultimarisada`.`PALHACO`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`PALHACO` (
+CREATE TABLE IF NOT EXISTS `ultimarisada`.`PALHACO` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `personalidade` VARCHAR(45) NOT NULL,
   `nota` DOUBLE NOT NULL,
@@ -32,9 +32,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`INSTRUMENTO_DE_RISADA`
+-- Table `ultimarisada`.`INSTRUMENTO_DE_RISADA`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`INSTRUMENTO_DE_RISADA` (
+CREATE TABLE IF NOT EXISTS `ultimarisada`.`INSTRUMENTO_DE_RISADA` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` VARCHAR(300) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`INSTRUMENTO_DE_RISADA` (
   INDEX `fk_INSTRUMENTO_DE_RISADA_PALHACO_idx` (`PALHACO_id` ASC) VISIBLE,
   CONSTRAINT `fk_INSTRUMENTO_DE_RISADA_PALHACO`
     FOREIGN KEY (`PALHACO_id`)
-    REFERENCES `mydb`.`PALHACO` (`id`)
+    REFERENCES `ultimarisada`.`PALHACO` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

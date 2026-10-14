@@ -21,7 +21,7 @@ public class PalhacoRepository {
         String sql = "INSERT INTO PALHACO (nome, dataNascimento, personalidade, nota, cache) "
                 + "VALUES (?, ?, ?, ?, ?)";
 
-        try (Connection conn = ConexaoMySQL.getConexao();
+        try (Connection conn = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
             stmt.setString(1, p.getNome());
@@ -45,7 +45,7 @@ public class PalhacoRepository {
         String sql = "UPDATE PALHACO SET nome = ?, dataNascimento = ?, personalidade = ?, cache = ? "
                 + "WHERE id = ?";
 
-        try (Connection conn = ConexaoMySQL.getConexao();
+        try (Connection conn = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, p.getNome());
@@ -60,7 +60,7 @@ public class PalhacoRepository {
     public void remover(int id) throws SQLException {
         String sql = "DELETE FROM PALHACO WHERE id = ?";
 
-        try (Connection conn = ConexaoMySQL.getConexao();
+        try (Connection conn = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setInt(1, id);
@@ -71,7 +71,7 @@ public class PalhacoRepository {
     public Palhaco buscarPorId(int id) throws SQLException {
         String sql = "SELECT * FROM PALHACO WHERE id = ?";
 
-        try (Connection conn = ConexaoMySQL.getConexao();
+        try (Connection conn = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setInt(1, id);
@@ -89,7 +89,7 @@ public class PalhacoRepository {
         String sql = "SELECT * FROM PALHACO";
         List<Palhaco> lista = new ArrayList<>();
 
-        try (Connection conn = ConexaoMySQL.getConexao();
+        try (Connection conn = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
 
@@ -105,7 +105,7 @@ public class PalhacoRepository {
         String sql = "SELECT * FROM PALHACO WHERE nome LIKE ?";
         List<Palhaco> lista = new ArrayList<>();
 
-        try (Connection conn = ConexaoMySQL.getConexao();
+        try (Connection conn = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, "%" + nome + "%");
@@ -125,7 +125,7 @@ public class PalhacoRepository {
         String sql = "SELECT * FROM PALHACO WHERE personalidade LIKE ? AND cache = ?";
         List<Palhaco> lista = new ArrayList<>();
 
-        try (Connection conn = ConexaoMySQL.getConexao();
+        try (Connection conn = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, "%" + personalidade + "%");
@@ -145,7 +145,7 @@ public class PalhacoRepository {
         String sql = "SELECT * FROM PALHACO ORDER BY nota DESC";
         List<Palhaco> lista = new ArrayList<>();
 
-        try (Connection conn = ConexaoMySQL.getConexao();
+        try (Connection conn = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
 
@@ -160,7 +160,7 @@ public class PalhacoRepository {
     public void atualizarNota(int idPalhaco, double novaNota) throws SQLException {
         String sql = "UPDATE PALHACO SET nota = ? WHERE id = ?";
 
-        try (Connection conn = ConexaoMySQL.getConexao();
+        try (Connection conn = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setDouble(1, novaNota);
