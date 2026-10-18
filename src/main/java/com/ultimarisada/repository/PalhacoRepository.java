@@ -122,7 +122,7 @@ public class PalhacoRepository {
     // filtra por personalidade
     public List<Palhaco> buscarPorPersonalidadeECacheMaximo(String personalidade, double cacheMaximo)
             throws SQLException {
-        String sql = "SELECT * FROM PALHACO WHERE personalidade LIKE ? AND cache = ?";
+        String sql = "SELECT * FROM PALHACO WHERE personalidade LIKE ? AND cache <= ?";
         List<Palhaco> lista = new ArrayList<>();
 
         try (Connection conn = ConexaoMySQL.obterConexao();

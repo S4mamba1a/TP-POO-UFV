@@ -5,11 +5,11 @@ public class ContratoRepository {
 
     public boolean existeContratoPendenteDoPalhaco(int idPalhaco){
         //a ser implementado
-        return false;
+        return true;
     }
 
     public boolean existeContratoPendenteComInstrumento(int idInstrumento){
         //a ser implementado
-        return false;
+        return true;
     }
 }

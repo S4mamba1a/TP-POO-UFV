@@ -13,6 +13,10 @@ public abstract class Pessoa {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
     }
+    public Pessoa(String nome, LocalDate dataNascimento) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+    }
 
     //getters
     public int getId() {

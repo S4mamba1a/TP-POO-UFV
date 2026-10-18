@@ -13,6 +13,11 @@ public class InstrumentoDeRisada {
         this.nome = nome;
         this.descricao = descricao;
     }
+    public InstrumentoDeRisada(double valor, String nome, String descricao) {
+        this.valor = valor;
+        this.nome = nome;
+        this.descricao = descricao;
+    }
 
     //getters
     public int getId() {

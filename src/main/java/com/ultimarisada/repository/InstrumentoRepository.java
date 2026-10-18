@@ -10,7 +10,7 @@ import java.util.List;
 public class InstrumentoRepository {
     
     public void salvar(InstrumentoDeRisada i, int idPalhacoDono) throws SQLException{
-        String sql = "INSERT INTO instrumento_de_risada" + "(nome, descricao, valor, id_palhaco)" + "VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO INSTRUMENTO_DE_RISADA" + "(nome, descricao, valor, PALHACO_id)" + "VALUES (?, ?, ?, ?)";
         try (Connection conexao = ConexaoMySQL.obterConexao();
             PreparedStatement stmt = conexao.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
                 stmt.setString(1, i.getNome());
@@ -27,7 +27,7 @@ public class InstrumentoRepository {
     }
 
     public void atualizar(InstrumentoDeRisada i) throws SQLException{
-        String sql = "UPDATE instrumento_de_risada SET nome = ?, descricao = ?, valor = ? WHERE id = ?";
+        String sql = "UPDATE INSTRUMENTO_DE_RISADA SET nome = ?, descricao = ?, valor = ? WHERE id = ?";
         try (Connection conexao = ConexaoMySQL.obterConexao();
             PreparedStatement stmt = conexao.prepareStatement(sql)){
                 stmt.setString(1, i.getNome());
@@ -39,7 +39,7 @@ public class InstrumentoRepository {
     }
 
     public void remover(int id) throws SQLException{
-        String sql = "DELETE FROM instrumento_de_risada WHERE id = ?";
+        String sql = "DELETE FROM INSTRUMENTO_DE_RISADA WHERE id = ?";
         try (Connection conexao = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conexao.prepareStatement(sql)){
                 stmt.setInt(1, id);
@@ -48,7 +48,7 @@ public class InstrumentoRepository {
     }
 
     public InstrumentoDeRisada buscarPorId(int id) throws SQLException{
-        String sql = "SELECT id, nome, descricao, valor " + "FROM instrumento_de_risada WHERE id = ?";
+        String sql = "SELECT id, nome, descricao, valor " + "FROM INSTRUMENTO_DE_RISADA WHERE id = ?";
         try (Connection conexao = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conexao.prepareStatement(sql)){
                 stmt.setInt(1, id);
@@ -63,7 +63,7 @@ public class InstrumentoRepository {
 
     public List<InstrumentoDeRisada> listarPorPalhaco(int idPalhaco) throws SQLException{
         List<InstrumentoDeRisada> instrumentos = new ArrayList<>();
-        String sql = "SELECT id, nome, descricao, valor " + "FROM instrumento_de_risada WHERE id_palhaco = ?";
+        String sql = "SELECT id, nome, descricao, valor " + "FROM INSTRUMENTO_DE_RISADA WHERE PALHACO_id = ?";
         try (Connection conexao = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conexao.prepareStatement(sql)){
                 stmt.setInt(1, idPalhaco);

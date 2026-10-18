@@ -17,6 +17,12 @@ public class Palhaco extends Pessoa{
         this.nota = nota;
         this.instrumentos = new ArrayList<>();
     }
+    public Palhaco(String nome, LocalDate dataNascimento, String personalidade, double cache) {
+        super(nome, dataNascimento);
+        this.personalidade = personalidade;
+        this.cache = cache;
+        this.instrumentos = new ArrayList<>();
+    }
 
     //getters
     public String getPersonalidade() {
