@@ -1,14 +1,14 @@
-package main.java.com.ultimarisada.service;
+package com.ultimarisada.service;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import main.java.com.ultimarisada.exceptions.ClienteEmUsoException;
-import main.java.com.ultimarisada.exceptions.ClienteJaCadastradoException;
-import main.java.com.ultimarisada.exceptions.ClienteSemContratanteException;
-import main.java.com.ultimarisada.model.Cliente;
-import main.java.com.ultimarisada.repository.ClienteRepository;
-import main.java.com.ultimarisada.repository.ContratoRepository;
+import com.ultimarisada.exceptions.ClienteEmUsoException;
+import com.ultimarisada.exceptions.ClienteJaCadastradoException;
+import com.ultimarisada.exceptions.ClienteSemContratanteException;
+import com.ultimarisada.model.Cliente;
+import com.ultimarisada.repository.ClienteRepository;
+import com.ultimarisada.repository.ContratoRepository;
 
 public class ClienteService {
     private ClienteRepository clienteRepository;

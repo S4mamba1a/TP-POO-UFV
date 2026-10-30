@@ -1,11 +1,11 @@
-package main.java.com.ultimarisada.service;
+package com.ultimarisada.service;
 import java.sql.SQLException;
 import java.util.List;
 
-import main.java.com.ultimarisada.exceptions.InstrumentoEmUsoException;
-import main.java.com.ultimarisada.model.InstrumentoDeRisada;
-import main.java.com.ultimarisada.repository.ContratoRepository;
-import main.java.com.ultimarisada.repository.InstrumentoRepository;
+import com.ultimarisada.exceptions.InstrumentoEmUsoException;
+import com.ultimarisada.model.InstrumentoDeRisada;
+import com.ultimarisada.repository.ContratoRepository;
+import com.ultimarisada.repository.InstrumentoRepository;
 
 public class InstrumentoService {
     private InstrumentoRepository instrumentoRepository = new InstrumentoRepository();

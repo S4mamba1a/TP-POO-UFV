@@ -1,6 +1,6 @@
-package main.java.com.ultimarisada.repository; 
+package com.ultimarisada.repository; 
 
-import main.java.com.ultimarisada.model.Contratante;
+import com.ultimarisada.model.Contratante;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;

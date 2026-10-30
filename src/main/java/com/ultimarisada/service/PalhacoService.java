@@ -1,9 +1,9 @@
-package main.java.com.ultimarisada.service;
+package com.ultimarisada.service;
 
-import main.java.com.ultimarisada.model.Palhaco;
-import main.java.com.ultimarisada.repository.PalhacoRepository;
-import main.java.com.ultimarisada.repository.ContratoRepository;
-import main.java.com.ultimarisada.exceptions.PalhacoEmUsoException;
+import com.ultimarisada.model.Palhaco;
+import com.ultimarisada.repository.PalhacoRepository;
+import com.ultimarisada.repository.ContratoRepository;
+import com.ultimarisada.exceptions.PalhacoEmUsoException;
 
 import java.sql.SQLException;
 import java.util.List;

@@ -1,11 +1,11 @@
-package main.java.com.ultimarisada.service;
+package com.ultimarisada.service;
 
-import main.java.com.ultimarisada.model.Contratante;
-import main.java.com.ultimarisada.repository.ContratanteRepository;
-import main.java.com.ultimarisada.repository.ContratoRepository;
-import main.java.com.ultimarisada.exceptions.ContratanteJaCadastradoException;
-import main.java.com.ultimarisada.exceptions.CredenciaisInvalidasException;
-import main.java.com.ultimarisada.exceptions.ContratanteEmUsoException;
+import com.ultimarisada.model.Contratante;
+import com.ultimarisada.repository.ContratanteRepository;
+import com.ultimarisada.repository.ContratoRepository;
+import com.ultimarisada.exceptions.ContratanteJaCadastradoException;
+import com.ultimarisada.exceptions.CredenciaisInvalidasException;
+import com.ultimarisada.exceptions.ContratanteEmUsoException;
 
 import java.sql.SQLException;
 import java.time.LocalDate;

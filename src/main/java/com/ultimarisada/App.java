@@ -1,4 +1,4 @@
-package main.java.com.ultimarisada;
+package com.ultimarisada;
 
 public class App {
     

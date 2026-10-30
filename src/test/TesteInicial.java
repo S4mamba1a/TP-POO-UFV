@@ -4,12 +4,12 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 
-import main.java.com.ultimarisada.exceptions.InstrumentoEmUsoException;
-import main.java.com.ultimarisada.exceptions.PalhacoEmUsoException;
-import main.java.com.ultimarisada.model.InstrumentoDeRisada;
-import main.java.com.ultimarisada.model.Palhaco;
-import main.java.com.ultimarisada.service.InstrumentoService;
-import main.java.com.ultimarisada.service.PalhacoService;
+import com.ultimarisada.exceptions.InstrumentoEmUsoException;
+import com.ultimarisada.exceptions.PalhacoEmUsoException;
+import com.ultimarisada.model.InstrumentoDeRisada;
+import com.ultimarisada.model.Palhaco;
+import com.ultimarisada.service.InstrumentoService;
+import com.ultimarisada.service.PalhacoService;
 
 public class TesteInicial {
     public static void main(String[] args) {

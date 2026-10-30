@@ -1,4 +1,4 @@
-package main.java.com.ultimarisada.model;
+package com.ultimarisada.model;
 
 
 public class Avaliacao {

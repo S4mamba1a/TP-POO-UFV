@@ -1,4 +1,4 @@
-package main.java.com.ultimarisada.exceptions;
+package com.ultimarisada.exceptions;
 
 public class OperacaoNaoPermitidaException extends UltimaRisadaException {
     public OperacaoNaoPermitidaException(String mensagem) {

@@ -1,7 +1,7 @@
-package main.java.com.ultimarisada.repository;
+package com.ultimarisada.repository;
 
-import main.java.com.ultimarisada.model.Contrato;
-import main.java.com.ultimarisada.model.StatusContrato;
+import com.ultimarisada.model.Contrato;
+import com.ultimarisada.model.StatusContrato;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;

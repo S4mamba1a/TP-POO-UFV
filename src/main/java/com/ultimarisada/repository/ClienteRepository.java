@@ -1,10 +1,10 @@
-package main.java.com.ultimarisada.repository;
+package com.ultimarisada.repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import main.java.com.ultimarisada.model.Cliente;
+import com.ultimarisada.model.Cliente;
 
 public class ClienteRepository {
 

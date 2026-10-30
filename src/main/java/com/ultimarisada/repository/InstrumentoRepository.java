@@ -1,6 +1,6 @@
-package main.java.com.ultimarisada.repository;
+package com.ultimarisada.repository;
 
-import main.java.com.ultimarisada.model.InstrumentoDeRisada;
+import com.ultimarisada.model.InstrumentoDeRisada;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

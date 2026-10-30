@@ -1,6 +1,6 @@
-package main.java.com.ultimarisada.repository;
+package com.ultimarisada.repository;
 
-import main.java.com.ultimarisada.model.Palhaco;
+import com.ultimarisada.model.Palhaco;
 
 import java.sql.Connection;
 import java.sql.Date;

@@ -1,4 +1,4 @@
-package main.java.com.ultimarisada.model;
+package com.ultimarisada.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDate;

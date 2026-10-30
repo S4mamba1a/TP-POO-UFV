@@ -1,13 +1,13 @@
-package main.java.com.ultimarisada.service;
+package com.ultimarisada.service;
 
-import main.java.com.ultimarisada.model.Contrato;
-import main.java.com.ultimarisada.repository.AvaliacaoRepository;
-import main.java.com.ultimarisada.repository.ContratoRepository;
-import main.java.com.ultimarisada.repository.PalhacoRepository;
-import main.java.com.ultimarisada.exceptions.AcessoNegadoException;
-import main.java.com.ultimarisada.exceptions.OperacaoNaoPermitidaException;
-import main.java.com.ultimarisada.exceptions.AvaliacaoDuplicadaException;
-import main.java.com.ultimarisada.exceptions.ValorDeAvaliacaoInvalidoException;
+import com.ultimarisada.model.Contrato;
+import com.ultimarisada.repository.AvaliacaoRepository;
+import com.ultimarisada.repository.ContratoRepository;
+import com.ultimarisada.repository.PalhacoRepository;
+import com.ultimarisada.exceptions.AcessoNegadoException;
+import com.ultimarisada.exceptions.OperacaoNaoPermitidaException;
+import com.ultimarisada.exceptions.AvaliacaoDuplicadaException;
+import com.ultimarisada.exceptions.ValorDeAvaliacaoInvalidoException;
 
 import java.sql.SQLException;
 import java.util.List;
