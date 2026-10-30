@@ -2,32 +2,33 @@ package main.java.com.ultimarisada.repository;
 
 import main.java.com.ultimarisada.model.Contratante;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 public class ContratanteRepository {
     
-    public void salvar(Contratante c) {
+    public void salvar(Contratante c) throws SQLException{
     }
 
-    public void atualizar(Contratante c) {
+    public void atualizar(Contratante c) throws SQLException{
     }
 
-    public void remover(int id) {
+    public void remover(int id) throws SQLException{
     }
 
-    public Contratante buscarPorId(int id) {
+    public Contratante buscarPorId(int id) throws SQLException{
         return null;
     }
 
-    public Contratante buscarPorNome(String nome) {
+    public Contratante buscarPorNome(String nome) throws SQLException{
         return null;
     }
 
-    public List<Contratante> listarTodos() {
+    public List<Contratante> listarTodos() throws SQLException{
         return null;
     }
 
-    private Contratante montarContratante(ResultSet rs) {
+    private Contratante montarContratante(ResultSet rs) throws SQLException{
         return null;
     }
 }

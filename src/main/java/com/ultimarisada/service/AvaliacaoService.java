@@ -8,6 +8,8 @@ import main.java.com.ultimarisada.exceptions.AcessoNegadoException;
 import main.java.com.ultimarisada.exceptions.OperacaoNaoPermitidaException;
 import main.java.com.ultimarisada.exceptions.AvaliacaoDuplicadaException;
 import main.java.com.ultimarisada.exceptions.ValorDeAvaliacaoInvalidoException;
+
+import java.sql.SQLException;
 import java.util.List;
 
 public class AvaliacaoService {
@@ -15,13 +17,13 @@ public class AvaliacaoService {
     private AvaliacaoRepository avaliacaoRepository;
     private PalhacoRepository palhacoRepository;
 
-    public void avaliar(int idContrato, int idContratanteLogado, int valor, String descricao) throws AcessoNegadoException, OperacaoNaoPermitidaException, AvaliacaoDuplicadaException, ValorDeAvaliacaoInvalidoException {
+    public void avaliar(int idContrato, int idContratanteLogado, int valor, String descricao) throws AcessoNegadoException, OperacaoNaoPermitidaException, AvaliacaoDuplicadaException, ValorDeAvaliacaoInvalidoException, SQLException {
     }
 
-    public void editar(int idContrato, int valor, String descricao) throws OperacaoNaoPermitidaException, ValorDeAvaliacaoInvalidoException {
+    public void editar(int idContrato, int valor, String descricao) throws OperacaoNaoPermitidaException, ValorDeAvaliacaoInvalidoException, SQLException {
     }
 
-    public void remover(int idContrato) {
+    public void remover(int idContrato) throws SQLException{
     }
 
     public double calcularNotaMedia(List<Contrato> contratosAvaliados) {

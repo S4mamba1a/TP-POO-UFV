@@ -1,5 +1,6 @@
 package main.java.com.ultimarisada.service;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import main.java.com.ultimarisada.exceptions.ClienteEmUsoException;
@@ -14,24 +15,24 @@ public class ClienteService {
     private ContratoRepository contratoRepository;
 
     public void cadastrar(Cliente c)
-            throws ClienteSemContratanteException, ClienteJaCadastradoException {
+            throws ClienteSemContratanteException, ClienteJaCadastradoException, SQLException {
     }
 
-    public void editar(Cliente c) throws ClienteJaCadastradoException {
+    public void editar(Cliente c) throws ClienteJaCadastradoException, SQLException {
     }
 
-    public void remover(int id) throws ClienteEmUsoException {
+    public void remover(int id) throws ClienteEmUsoException, SQLException {
     }
 
-    public Cliente buscarPorId(int id) {
+    public Cliente buscarPorId(int id) throws SQLException{
         return null;
     }
 
-    public List<Cliente> listarTodos() {
+    public List<Cliente> listarTodos() throws SQLException{
         return null;
     }
 
-    public List<Cliente> listarPorContratante(int idContratante) {
+    public List<Cliente> listarPorContratante(int idContratante) throws SQLException{
         return null;
     }
 }
