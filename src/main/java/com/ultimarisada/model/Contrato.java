@@ -12,6 +12,28 @@ public class Contrato {
     private InstrumentoDeRisada instrumento;
     private Avaliacao avaliacao;
 
+    public Contrato(int id, LocalDate dataFinal, StatusContrato status, Contratante contratante, Cliente cliente, Palhaco palhaco, InstrumentoDeRisada instrumento, Avaliacao avaliacao) {
+        this.id = id;
+        this.dataFinal = dataFinal;
+        this.status = status;
+        this.contratante = contratante;
+        this.cliente = cliente;
+        this.palhaco = palhaco;
+        this.instrumento = instrumento;
+        this.avaliacao = avaliacao;
+    }
+
+    public Contrato(LocalDate dataFinal, StatusContrato status, Contratante contratante, Cliente cliente, Palhaco palhaco, InstrumentoDeRisada instrumento) {
+        this.id = 0;
+        this.dataFinal = dataFinal;
+        this.status = status;
+        this.contratante = contratante;
+        this.cliente = cliente;
+        this.palhaco = palhaco;
+        this.instrumento = instrumento;
+        this.avaliacao = null;
+    }
+
     // Getters
     public int getId() {
         return 0;
