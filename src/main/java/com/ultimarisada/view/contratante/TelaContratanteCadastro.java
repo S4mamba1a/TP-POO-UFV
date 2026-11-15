@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 import com.ultimarisada.exceptions.ContratanteJaCadastradoException;
 import com.ultimarisada.model.Contratante;
+import com.ultimarisada.service.ContratanteService;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +16,9 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 public class TelaContratanteCadastro {
+    private ContratanteService contratanteService = new ContratanteService();
     private Stage stage;
     @FXML private TextField campoNome;
     @FXML private DatePicker campoDataNascimento;

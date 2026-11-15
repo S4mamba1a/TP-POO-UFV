@@ -16,6 +16,11 @@ public class Contratante extends Pessoa {
         this.senha = senha;
     }
 
+    public Contratante(Contratante c) {
+        super(c.getId(), c.getNome(), c.getDataNascimento());
+        this.senha = c.getSenha();
+    }
+
     // Getters
     public String getSenha() {
         return senha;
