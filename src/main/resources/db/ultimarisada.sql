@@ -54,7 +54,7 @@ ENGINE = InnoDB;
 -- Table `ultimarisada`.`AVALIACAO`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ultimarisada`.`AVALIACAO` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `valor` INT NOT NULL,
   `descricao` VARCHAR(300) NOT NULL,
   PRIMARY KEY (`id`))
@@ -65,7 +65,7 @@ ENGINE = InnoDB;
 -- Table `ultimarisada`.`CONTRATANTE`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ultimarisada`.`CONTRATANTE` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `data_nascimento` DATE NOT NULL,
   `senha` VARCHAR(45) NOT NULL,
@@ -77,7 +77,7 @@ ENGINE = InnoDB;
 -- Table `ultimarisada`.`CLIENTE`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ultimarisada`.`CLIENTE` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `data_nascimento` DATE NOT NULL,
   `descricao_fisica` VARCHAR(100) NOT NULL,
@@ -98,7 +98,7 @@ ENGINE = InnoDB;
 -- Table `ultimarisada`.`CONTRATO`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ultimarisada`.`CONTRATO` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `data_final` DATE NOT NULL,
   `status` ENUM('PENDENTE', 'REALIZADA', 'CANCELADA') NOT NULL DEFAULT 'PENDENTE',
   `CONTRATANTE_id` INT NOT NULL,
