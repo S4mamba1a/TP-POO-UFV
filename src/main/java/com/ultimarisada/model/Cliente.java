@@ -60,6 +60,6 @@ public class Cliente extends Pessoa {
 
     @Override
     public String exibirResumo() {
-        return getNome() + " - " + getDescricaoFisica();
+        return getNome() + " — " + getDescricaoFisica();
     }
 }

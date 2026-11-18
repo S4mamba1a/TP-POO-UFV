@@ -11,28 +11,52 @@ import com.ultimarisada.repository.ClienteRepository;
 import com.ultimarisada.repository.ContratoRepository;
 
 public class ClienteService {
-    private ClienteRepository clienteRepository;
-    private ContratoRepository contratoRepository;
+    private ClienteRepository clienteRepository = new ClienteRepository();
+    private ContratoRepository contratoRepository = new ContratoRepository();
+
+    public ClienteService() {
+    }
+
+    public ClienteService(ClienteRepository clienteRepository, ContratoRepository contratoRepository) {
+        this.clienteRepository = clienteRepository;
+        this.contratoRepository = contratoRepository;
+    }
 
     public void cadastrar(Cliente c)
             throws ClienteSemContratanteException, ClienteJaCadastradoException, SQLException {
+        if (c.getContratante() == null) {
+            throw new ClienteSemContratanteException("O cliente precisa estar vinculado a um contratante.");
+        }
+        if (clienteRepository.buscarPorNome(c.getNome()) != null) {
+            throw new ClienteJaCadastradoException("Já existe um cliente com esse nome.");
+        }
+        clienteRepository.salvar(c);
     }
 
     public void editar(Cliente c) throws ClienteJaCadastradoException, SQLException {
+        Cliente existente = clienteRepository.buscarPorNome(c.getNome());
+        if (existente != null && existente.getId() != c.getId()) {
+            throw new ClienteJaCadastradoException("Já existe um cliente com esse nome.");
+        }
+        clienteRepository.atualizar(c);
     }
 
     public void remover(int id) throws ClienteEmUsoException, SQLException {
+        if (contratoRepository.existeContratoPendenteDoCliente(id)) {
+            throw new ClienteEmUsoException("O cliente possui contratos pendentes e não pode ser removido.");
+        }
+        clienteRepository.remover(id);
     }
 
     public Cliente buscarPorId(int id) throws SQLException{
-        return null;
+        return clienteRepository.buscarPorId(id);
     }
 
     public List<Cliente> listarTodos() throws SQLException{
-        return null;
+        return clienteRepository.listarTodos();
     }
 
     public List<Cliente> listarPorContratante(int idContratante) throws SQLException{
-        return null;
+        return clienteRepository.listarPorContratante(idContratante);
     }
 }
