@@ -14,6 +14,12 @@ public class ConexaoMySQL{
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("driver jdbc nao foi encontrado na sua biblioteca do projeto", e);
         }
-        return DriverManager.getConnection(URL, USER, PASSWORD);
+        String urlBancoTestes = System.getProperty("dbTeste");
+        if(urlBancoTestes == null){ //banco de dados normal da aplicação
+            return DriverManager.getConnection(URL, USER, PASSWORD);
+        }
+        else{ //banco de dados usado nos testes unitários
+            return DriverManager.getConnection(urlBancoTestes, "sa", "");
+        }
     }
 }
