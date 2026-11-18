@@ -18,7 +18,7 @@ public class PalhacoRepository {
 
     // insere um palhaço novo
     public void salvar(Palhaco p) throws SQLException {
-        String sql = "INSERT INTO PALHACO (nome, dataNascimento, personalidade, nota, cache) "
+        String sql = "INSERT INTO PALHACO (nome, data_nascimento, personalidade, nota, cache) "
                 + "VALUES (?, ?, ?, ?, ?)";
 
         try (Connection conn = ConexaoMySQL.obterConexao();
@@ -42,7 +42,7 @@ public class PalhacoRepository {
 
     // atualiza os dados do palhaço
     public void atualizar(Palhaco p) throws SQLException {
-        String sql = "UPDATE PALHACO SET nome = ?, dataNascimento = ?, personalidade = ?, cache = ? "
+        String sql = "UPDATE PALHACO SET nome = ?, data_nascimento = ?, personalidade = ?, cache = ? "
                 + "WHERE id = ?";
 
         try (Connection conn = ConexaoMySQL.obterConexao();
@@ -176,7 +176,7 @@ public class PalhacoRepository {
         Palhaco p = new Palhaco(
                 id,
                 rs.getString("nome"),
-                rs.getDate("dataNascimento").toLocalDate(),
+                rs.getDate("data_nascimento").toLocalDate(),
                 rs.getString("personalidade"),
                 rs.getDouble("cache"),
                 rs.getDouble("nota"));
