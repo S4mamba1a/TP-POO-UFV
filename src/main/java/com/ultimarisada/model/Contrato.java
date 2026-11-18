@@ -36,59 +36,68 @@ public class Contrato {
 
     // Getters
     public int getId() {
-        return 0;
+        return id;
     }
 
     public LocalDate getDataFinal() {
-        return null;
+        return dataFinal;
     }
 
     public StatusContrato getStatus() {
-        return null;
+        return status;
     }
 
     public Contratante getContratante() {
-        return null;
+        return contratante;
     }
 
     public Cliente getCliente() {
-        return null;
+        return cliente;
     }
 
     public Palhaco getPalhaco() {
-        return null;
+        return palhaco;
     }
 
     public InstrumentoDeRisada getInstrumento() {
-        return null;
+        return instrumento;
     }
 
+    // pode ser null se o contrato ainda não foi avaliado
     public Avaliacao getAvaliacao() {
-        return null;
+        return avaliacao;
     }
 
     // Setters
     public void setId(int id) {
+        this.id = id;
     }
 
     public void setDataFinal(LocalDate dataFinal) {
+        this.dataFinal = dataFinal;
     }
 
     public void setStatus(StatusContrato status) {
+        this.status = status;
     }
 
     public void setContratante(Contratante contratante) {
+        this.contratante = contratante;
     }
 
     public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public void setPalhaco(Palhaco palhaco) {
+        this.palhaco = palhaco;
     }
 
     public void setInstrumento(InstrumentoDeRisada instrumento) {
+        this.instrumento = instrumento;
     }
 
     public void setAvaliacao(Avaliacao avaliacao) {
+        this.avaliacao = avaliacao;
     }
 }
