@@ -103,7 +103,7 @@ public class TelaContratanteClientes {
     @FXML private void onLimparClicado() {
             limparFormulario();
         }
-        //coloca como cliente os valores escritos
+    //coloca como cliente os valores escritos
     private Cliente lerFormulario() {
         String nome = campoNome.getText().trim();
         LocalDate data = campoDataNascimento.getValue();
@@ -117,14 +117,7 @@ public class TelaContratanteClientes {
             return null;
         }
 
-        Cliente c = new Cliente();
-        c.setNome(nome);
-        c.setDataNascimento(data);
-        c.setDescricaoFisica(campoDescricaoFisica.getText());
-        c.setEndereco(campoEndereco.getText());
-        c.setLocalDeTrabalho(campoLocalDeTrabalho.getText());
-        c.setContratante(sessao.getContratanteLogado());
-        return c;
+        return new Cliente(nome,data,campoDescricaoFisica.getText(),campoEndereco.getText(),campoLocalDeTrabalho.getText(),sessao.getContratanteLogado());
     }
     //volta para o menu
     @FXML private void onVoltarClicado() {
