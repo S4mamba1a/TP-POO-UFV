@@ -34,6 +34,8 @@ public class Contrato {
         this.avaliacao = null;
     }
 
+    public Contrato(){}
+
     // Getters
     public int getId() {
         return id;
