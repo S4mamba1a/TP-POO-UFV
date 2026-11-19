@@ -48,7 +48,7 @@
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
             <Label layoutX="247.0" layoutY="91.0" text="Login do Contratante" />
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Voltar" textAlignment="CENTER" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0" />
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onVoltarClicado" text="Voltar" textAlignment="CENTER" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0" />
             <GridPane layoutX="212.0" layoutY="137.0" prefHeight="142.0" prefWidth="210.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -76,17 +76,17 @@
                         <Insets left="5.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" text="Entrar" GridPane.rowIndex="3">
+                  <Button mnemonicParsing="false" onAction="#onEntrarClicado" prefHeight="26.0" prefWidth="103.0" text="Entrar" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="Cadastrar-se" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <Button mnemonicParsing="false" onAction="#onCadastrarSeClicado" prefHeight="26.0" prefWidth="114.0" text="Cadastrar-se" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
                   </Button>
-                  <PasswordField fx:id="campoSenha" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <PasswordField fx:id="campoSenha" onAction="#onEntrarClicado" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
