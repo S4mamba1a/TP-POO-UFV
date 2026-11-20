@@ -55,7 +55,7 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="32.0" prefWidth="454.0">
                            <children>
-                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="114.0" text="Fechar" />
+                              <Button onAction="#onFecharClicado" alignment="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="114.0" text="Fechar" />
                            </children>
                         </HBox>
                      </children>
@@ -65,7 +65,7 @@
                   <TableView fx:id="tabelaAvaliacoes" prefHeight="266.0" prefWidth="414.0" BorderPane.alignment="CENTER">
                      <columns>
                         <TableColumn fx:id="colunaNota" prefWidth="207.0" text="Nota" />
-                        <TableColumn minWidth="0.0" prefWidth="207.0" text="Comentário" />
+                        <TableColumn fx:id="colunaComentario" minWidth="0.0" prefWidth="207.0" text="Comentário" />
                      </columns>
                   </TableView>
                </center>

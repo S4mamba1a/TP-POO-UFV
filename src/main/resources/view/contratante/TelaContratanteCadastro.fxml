@@ -26,9 +26,9 @@
       <Label text="Nome" GridPane.rowIndex="1" />
       <Label text="Data de Nascimento" GridPane.rowIndex="2" />
       <Label text="Senha" GridPane.rowIndex="3" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="campoNome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <DatePicker fx:id="campoDataNascimento" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <PasswordField fx:id="campoSenha" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <Button fx:id="cancelar" mnemonicParsing="false" onAction="#onCancelarClicado" text="Cancelar" GridPane.rowIndex="4" />
       <Button fx:id="confirmar" mnemonicParsing="false" onAction="#onConfirmarClicado" text="Confirmar" GridPane.columnIndex="1" GridPane.rowIndex="4" />
    </children>

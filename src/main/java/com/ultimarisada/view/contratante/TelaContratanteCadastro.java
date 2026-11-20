@@ -43,7 +43,7 @@ public class TelaContratanteCadastro {
         }
     }
     @FXML
-    private void onConfirmarClicando(){
+    private void onConfirmarClicado(){
         //pega os textos
         String nome = campoNome.getText().trim();
         String senha = campoSenha.getText();
@@ -67,7 +67,7 @@ public class TelaContratanteCadastro {
 
             SessaoContratante sessao = new SessaoContratante();
             sessao.login(contratante);
-            //new TelaContratanteMenu(stage, sessao).exibir();
+            new TelaContratanteMenu(stage, sessao).exibir();
 
         } catch (ContratanteJaCadastradoException e) { 
             errado(e.getMessage());
@@ -77,7 +77,7 @@ public class TelaContratanteCadastro {
     }
     @FXML
     private void onCancelarClicado() {
-        //new TelaContratanteLogin(stage).exibir();
+        new TelaContratanteLogin(stage).exibir();
     }
 
     private void errado(String mensagem){

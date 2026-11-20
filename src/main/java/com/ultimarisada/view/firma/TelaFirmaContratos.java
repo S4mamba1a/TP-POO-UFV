@@ -361,7 +361,7 @@ public class TelaFirmaContratos {
     }
 
     @FXML private void onVoltarClicado() {
-        //new TelaFirmaMenu(stage).exibir(); nn existe ainda
+        new TelaFirmaMenu(stage).exibir();
     }
 
     private Contrato lerFormulario() {

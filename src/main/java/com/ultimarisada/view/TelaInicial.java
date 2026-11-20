@@ -1,6 +1,9 @@
 package com.ultimarisada.view;
 import java.io.IOException;
 
+import com.ultimarisada.view.contratante.TelaContratanteLogin;
+import com.ultimarisada.view.firma.TelaFirmaMenu;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -29,12 +32,10 @@ public class TelaInicial {
     }
     @FXML 
     private void onEscolherFirmaClicado(){
-        //new TelaFirmaMenu(stage).exibir();
-        //depois que os cara fizer a gnt descomenta
+        new TelaFirmaMenu(stage).exibir();
     }
     @FXML 
     private void onEscolherContratanteClicado(){
-        //new TelaContratanteLogin(stage).exibir();
-        //depois que os cara fizer ...
+        new TelaContratanteLogin(stage).exibir();
     }
 }

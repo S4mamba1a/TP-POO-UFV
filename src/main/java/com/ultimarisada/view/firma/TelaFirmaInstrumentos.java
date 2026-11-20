@@ -221,8 +221,7 @@ public class TelaFirmaInstrumentos {
 
     @FXML
     private void onVoltarClicado() {
-        //new TelaFirmaMenu(stage).exibir();
-        //descomentar quando a TelaFirmaMenu existir
+        new TelaFirmaMenu(stage).exibir();
     }
 
     private InstrumentoDeRisada lerFormulario() {
