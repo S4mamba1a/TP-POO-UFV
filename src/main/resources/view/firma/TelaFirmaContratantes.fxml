@@ -16,7 +16,7 @@
 <!-- Sem fx:controller: o controller é definido via loader.setController(this) -->
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            prefWidth="800" prefHeight="560">
+            prefWidth="1000" prefHeight="620">
 
     <!-- Topo: formulário -->
     <top>

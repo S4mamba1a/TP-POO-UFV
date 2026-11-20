@@ -37,19 +37,34 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" prefHeight="620" prefWidth="1000" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-      <children>
-            <Label layoutX="247.0" layoutY="91.0" text="Login do Contratante" />
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onVoltarClicado" text="Voltar" textAlignment="CENTER" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0" />
-            <GridPane layoutX="212.0" layoutY="137.0" prefHeight="142.0" prefWidth="210.0">
+      <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="1000.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onVoltarClicado" text="Voltar">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="272.0">
+         <children>
+            <Label contentDisplay="CENTER" text="Login do Contratante">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <GridPane prefHeight="142.0" prefWidth="210.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -93,7 +108,7 @@
                   </PasswordField>
                </children>
             </GridPane>
-      </children>
-    </AnchorPane>
+         </children>
+      </VBox>
   </children>
 </VBox>
