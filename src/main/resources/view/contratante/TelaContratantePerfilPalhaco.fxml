@@ -32,6 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -49,33 +50,39 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <BorderPane layoutX="113.0" layoutY="23.0" prefHeight="349.0" prefWidth="414.0">
+            <BorderPane layoutX="129.0" layoutY="48.0" prefHeight="523.0" prefWidth="741.0">
                <bottom>
-                  <HBox prefHeight="32.0" prefWidth="235.0" BorderPane.alignment="CENTER">
+                  <HBox prefHeight="32.0" prefWidth="742.0" BorderPane.alignment="CENTER">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="454.0">
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="742.0">
                            <children>
-                              <Button onAction="#onFecharClicado" alignment="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="114.0" text="Fechar" />
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#onFecharClicado" prefHeight="30.0" prefWidth="114.0" text="Fechar" />
                            </children>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
                         </HBox>
                      </children>
                   </HBox>
                </bottom>
                <center>
-                  <TableView fx:id="tabelaAvaliacoes" prefHeight="266.0" prefWidth="414.0" BorderPane.alignment="CENTER">
+                  <TableView fx:id="tabelaAvaliacoes" prefHeight="315.0" prefWidth="742.0" BorderPane.alignment="CENTER">
                      <columns>
-                        <TableColumn fx:id="colunaNota" prefWidth="207.0" text="Nota" />
-                        <TableColumn fx:id="colunaComentario" minWidth="0.0" prefWidth="207.0" text="Comentário" />
+                        <TableColumn fx:id="colunaNota" prefWidth="141.6000213623047" text="Nota" />
+                        <TableColumn fx:id="colunaComentario" minWidth="0.0" prefWidth="599.2000122070312" text="Comentário" />
                      </columns>
+                     <BorderPane.margin>
+                        <Insets top="30.0" />
+                     </BorderPane.margin>
                   </TableView>
                </center>
                <top>
-                  <HBox prefHeight="127.0" prefWidth="414.0" BorderPane.alignment="CENTER">
+                  <HBox prefHeight="205.0" prefWidth="742.0" BorderPane.alignment="CENTER">
                      <children>
-                        <GridPane prefHeight="127.0" prefWidth="891.0">
+                        <GridPane hgap="10.0" prefHeight="158.0" prefWidth="446.0" vgap="20.0">
                           <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.20001220703125" minWidth="10.0" prefWidth="87.20003662109374" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.5999755859375" minWidth="10.0" prefWidth="327.1999633789062" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.8000244140625" minWidth="10.0" prefWidth="127.1999755859375" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="428.00001525878906" minWidth="10.0" prefWidth="336.0000244140625" />
                           </columnConstraints>
                           <rowConstraints>
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -91,13 +98,19 @@
                               <Label text="Cachê:" GridPane.rowIndex="3" />
                               <Label text="Nota:" GridPane.rowIndex="4" />
                               <ComboBox fx:id="comboPalhaco" onAction="#onPalhacoSelecionado" prefHeight="70.0" prefWidth="333.0" promptText="Escolha o Palhaço" GridPane.columnIndex="1" />
-                              <Label fx:id="rotuloNome" prefHeight="64.0" prefWidth="333.0" text="Nome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label fx:id="rotuloPersonalidade" prefHeight="116.0" prefWidth="486.0" text="Personalidade" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label fx:id="rotuloCache" prefHeight="191.0" prefWidth="530.0" text="Cachê" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label fx:id="rotuloNota" prefHeight="150.0" prefWidth="611.0" text="Nota" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="rotuloNome" prefHeight="26.0" prefWidth="189.0" text="Nome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="rotuloPersonalidade" prefHeight="26.0" prefWidth="189.0" text="Personalidade" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="rotuloCache" prefHeight="189.0" prefWidth="530.0" text="Cachê" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="rotuloNota" prefHeight="49.0" prefWidth="411.0" text="Nota" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                            </children>
+                           <HBox.margin>
+                              <Insets left="150.0" />
+                           </HBox.margin>
                         </GridPane>
                      </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
                   </HBox>
                </top>
             </BorderPane>
