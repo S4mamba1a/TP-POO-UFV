@@ -32,6 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -47,29 +48,32 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <GridPane layoutX="141.0" layoutY="70.0" prefHeight="146.0" prefWidth="358.0">
+            <GridPane hgap="10.0" layoutX="244.0" layoutY="124.0" prefHeight="266.0" prefWidth="511.0" vgap="20.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.20001220703125" minWidth="10.0" prefWidth="84.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.20001220703125" minWidth="10.0" prefWidth="300.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.20001220703125" minWidth="10.0" prefWidth="79.80003356933594" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.19996643066406" minWidth="10.0" prefWidth="431.19996643066406" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="99.8" minHeight="10.0" prefHeight="84.59998779296875" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="65.60000610351562" minHeight="10.0" prefHeight="43.20001831054687" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="98.4" minHeight="10.0" prefHeight="81.59998168945313" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="107.19998168945312" minHeight="10.0" prefHeight="40.799993896484374" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="118.4000228881836" minHeight="10.0" prefHeight="75.2000061035156" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="188.8" minHeight="10.0" prefHeight="151.1999938964844" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label prefHeight="85.0" prefWidth="252.0" text="Contrato:" />
-                  <Label fx:id="rotuloResumo" prefHeight="63.0" prefWidth="298.0" text="Resumo do Contrato" GridPane.columnIndex="1" />
-                  <Label text="Nota (1 a 5):" GridPane.rowIndex="1" />
-                  <TextField fx:id="campoValor" prefHeight="48.0" prefWidth="192.0" text="Digite Nota" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label prefHeight="120.0" prefWidth="192.0" text="Comentário:" GridPane.rowIndex="2" />
-                  <TextArea fx:id="campoDescricao" prefHeight="200.0" prefWidth="200.0" text="Deixe um Comentário" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label prefHeight="34.0" prefWidth="252.0" text="Contrato:" />
+                  <Label fx:id="rotuloResumo" prefHeight="27.0" prefWidth="462.0" text="Resumo do Contrato" GridPane.columnIndex="1" />
+                  <Label prefHeight="34.0" prefWidth="85.0" text="Nota (1 a 5):" GridPane.rowIndex="1" />
+                  <TextField fx:id="campoValor" prefHeight="34.0" prefWidth="423.0" text="Digite Nota" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="250.0" />
+                     </GridPane.margin></TextField>
+                  <Label prefHeight="34.0" prefWidth="192.0" text="Comentário:" GridPane.rowIndex="2" />
+                  <TextArea fx:id="campoDescricao" prefHeight="142.0" prefWidth="431.0" text="Deixe um Comentário" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
-            <HBox layoutX="247.0" layoutY="240.0" prefHeight="30.0" prefWidth="146.0" spacing="10.0">
+            <HBox layoutX="244.0" layoutY="496.0" prefHeight="27.0" prefWidth="511.0" spacing="80.0">
                <children>
-                  <Button fx:id="botaoConfirmar" mnemonicParsing="false" onAction="#onConfirmarClicado" prefHeight="30.0" prefWidth="69.0" text="Confirmar" />
-                  <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#onCancelarClicado" prefHeight="30.0" prefWidth="65.0" text="Cancelar" />
+                  <Button fx:id="botaoConfirmar" mnemonicParsing="false" onAction="#onConfirmarClicado" prefHeight="27.0" prefWidth="462.0" text="Confirmar" />
+                  <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#onCancelarClicado" prefHeight="27.0" prefWidth="499.0" text="Cancelar" />
                </children>
             </HBox>
          </children>
