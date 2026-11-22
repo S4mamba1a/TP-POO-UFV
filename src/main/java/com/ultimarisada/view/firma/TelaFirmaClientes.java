@@ -80,7 +80,7 @@ public class TelaFirmaClientes {
         StringConverter<Contratante> conversor = new StringConverter<>() {
             @Override
             public String toString(Contratante c) {
-                return c == null ? "" : c.getNome();
+                return c == null ? "" : c.exibirResumo();
             }
 
             @Override

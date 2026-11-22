@@ -73,7 +73,7 @@ public class TelaContratanteNovoContrato {
         comboCliente.setConverter(new StringConverter<Cliente>() {
             @Override
             public String toString(Cliente c) {
-                return c == null ? "" : c.getNome();
+                return c.exibirResumo();
             }
 
             @Override
@@ -88,8 +88,7 @@ public class TelaContratanteNovoContrato {
                 if (p == null) {
                     return "";
                 }
-                return p.getNome() + " — " + p.getPersonalidade()
-                        + " — nota " + String.format(PT_BR, "%.1f", p.getNota());
+                return p.exibirResumo();
             }
 
             @Override
@@ -101,7 +100,7 @@ public class TelaContratanteNovoContrato {
         comboInstrumento.setConverter(new StringConverter<InstrumentoDeRisada>() {
             @Override
             public String toString(InstrumentoDeRisada i) {
-                return i == null ? "" : i.getNome() + " — " + formatarDinheiro(i.getValor());
+                return i == null ? "" : i.getNome() + " - " + formatarDinheiro(i.getValor());
             }
 
             @Override

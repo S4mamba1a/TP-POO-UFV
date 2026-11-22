@@ -79,7 +79,7 @@ public class TelaFirmaInstrumentos {
         StringConverter<Palhaco> conversor = new StringConverter<Palhaco>() {
             @Override
             public String toString(Palhaco p) {
-                return p == null ? "" : p.getNome();
+                return p == null ? "" : p.exibirResumo();
             }
             @Override
             public Palhaco fromString(String texto) {

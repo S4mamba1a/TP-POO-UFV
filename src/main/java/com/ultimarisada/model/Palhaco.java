@@ -55,6 +55,6 @@ public class Palhaco extends Pessoa{
     //toString
     @Override
     public String exibirResumo() {
-        return String.format("Nome: " + this.getNome() + " | Personalidade: " + this.personalidade + " | Nota: " + this.nota);
+        return String.format(this.getNome() + " - " + this.personalidade + " - " + this.nota);
     }
 }

@@ -12,7 +12,6 @@ import com.ultimarisada.model.Contrato;
 import com.ultimarisada.model.Palhaco;
 import com.ultimarisada.model.StatusContrato;
 import com.ultimarisada.service.AvaliacaoService;
-import com.ultimarisada.service.ContratanteService;
 import com.ultimarisada.service.ContratoService;
 import com.ultimarisada.service.PalhacoService;
 
@@ -79,7 +78,7 @@ public class TelaFirmaAvaliacoes {
 
     @FXML private void initialize() {
         comboFiltroPalhaco.setConverter(new StringConverter<>() {
-            @Override public String toString(Palhaco p) { return p == null ? "" : p.getNome(); }
+            @Override public String toString(Palhaco p) { return p == null ? "" : p.exibirResumo(); }
             @Override public Palhaco fromString(String s) { return null; }
         });
 

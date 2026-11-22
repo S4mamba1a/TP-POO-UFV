@@ -63,7 +63,7 @@ public class TelaContratantePerfil {
 
     @FXML
     private void initialize() {
-        rotuloContratante.setText("Contratos de " + sessao.getContratanteLogado().getNome());
+        rotuloContratante.setText("Contratos de " + sessao.getContratanteLogado().exibirResumo());
 
        
         colunaId.setCellValueFactory(new PropertyValueFactory<>("id"));

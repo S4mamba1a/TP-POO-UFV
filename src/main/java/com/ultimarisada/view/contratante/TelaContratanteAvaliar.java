@@ -65,8 +65,8 @@ public class TelaContratanteAvaliar {
 
     @FXML
     private void initialize() {
-        rotuloResumo.setText("Palhaço: " + contratoAlvo.getPalhaco().getNome()
-                + " | Cliente: " + contratoAlvo.getCliente().getNome()
+        rotuloResumo.setText("Palhaço: " + contratoAlvo.getPalhaco().exibirResumo()
+                + " | Cliente: " + contratoAlvo.getCliente().exibirResumo()
                 + " | Status: " + contratoAlvo.getStatus());
     }
 

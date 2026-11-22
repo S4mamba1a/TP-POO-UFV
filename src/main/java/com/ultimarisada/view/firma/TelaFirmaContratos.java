@@ -6,8 +6,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import com.ultimarisada.exceptions.ContratoInvalidoException;
 import com.ultimarisada.exceptions.OperacaoNaoPermitidaException;
@@ -101,21 +99,21 @@ public class TelaFirmaContratos {
 
     @FXML private void initialize() {
         StringConverter<Contratante> conversorContratante = new StringConverter<>() {
-            @Override public String toString(Contratante c) { return c == null ? "" : c.getNome(); }
+            @Override public String toString(Contratante c) { return c == null ? "" : c.exibirResumo(); }
             @Override public Contratante fromString(String s) { return null; }
         };
         comboContratante.setConverter(conversorContratante);
         comboFiltroContratante.setConverter(conversorContratante);
 
         StringConverter<Palhaco> conversorPalhaco = new StringConverter<>() {
-            @Override public String toString(Palhaco p) { return p == null ? "" : p.getNome(); }
+            @Override public String toString(Palhaco p) { return p == null ? "" : p.exibirResumo(); }
             @Override public Palhaco fromString(String s) { return null; }
         };
         comboPalhaco.setConverter(conversorPalhaco);
         comboFiltroPalhaco.setConverter(conversorPalhaco);
 
         comboCliente.setConverter(new StringConverter<>() {
-            @Override public String toString(Cliente c) { return c == null ? "" : c.getNome(); }
+            @Override public String toString(Cliente c) { return c == null ? "" : c.exibirResumo(); }
             @Override public Cliente fromString(String s) { return null; }
         });
 
@@ -272,7 +270,6 @@ public class TelaFirmaContratos {
         if (novo == null) return;
         selecionado = novo;
         preencherFormulario(novo);
-        botaoSalvar.setText("Salvar alterações");
         botaoRemover.setDisable(false);
         boolean pendente = novo.getStatus() == StatusContrato.PENDENTE;
         comboNovoStatus.setDisable(!pendente);
