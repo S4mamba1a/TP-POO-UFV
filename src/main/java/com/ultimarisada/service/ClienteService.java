@@ -43,7 +43,7 @@ public class ClienteService {
 
     public void remover(int id) throws ClienteEmUsoException, SQLException {
         if (contratoRepository.existeContratoComCliente(id)) {
-            throw new ClienteEmUsoException("O cliente está em contratos e não pode ser removido.");
+            throw new ClienteEmUsoException("O cliente está presente em algum contrato e não pode ser removido.");
         }
         clienteRepository.remover(id);
     }
