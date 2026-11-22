@@ -92,7 +92,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label prefHeight="18.0" prefWidth="50.0" text="Palhaço:" />
+                              <Label prefHeight="18.0" prefWidth="84.0" text="Palhaço:" />
                               <Label prefHeight="18.0" prefWidth="41.0" text="Nome:" GridPane.rowIndex="1" />
                               <Label text="Personalidade:" GridPane.rowIndex="2" />
                               <Label text="Cachê:" GridPane.rowIndex="3" />

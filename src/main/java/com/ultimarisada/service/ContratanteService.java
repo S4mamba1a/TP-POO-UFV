@@ -49,8 +49,8 @@ public class ContratanteService {
     }
 
     public void remover(int id) throws ContratanteEmUsoException, SQLException {
-        if (contratoRepository.existeContratoPendenteDoContratante(id)) {
-            throw new ContratanteEmUsoException("O contratante possui contratos pendentes e não pode ser removido.");
+        if (contratoRepository.existeContratoComContratante(id)) {
+            throw new ContratanteEmUsoException("O contratante possui contratos e não pode ser removido.");
         }
         contratanteRepository.remover(id);
     }

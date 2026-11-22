@@ -41,6 +41,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox prefHeight="620" prefWidth="1000" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
   <children>
@@ -48,10 +49,13 @@
          <children>
             <BorderPane layoutX="150.0" layoutY="62.0" prefHeight="495.0" prefWidth="700.0">
                <top>
-                  <Label fx:id="rotuloContratante" prefHeight="35.0" prefWidth="165.0" text="Nome do Contratante" BorderPane.alignment="CENTER">
+                  <Label fx:id="rotuloContratante" alignment="CENTER" prefHeight="35.0" prefWidth="339.0" text="Nome do Contratante" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets bottom="10.0" />
-                     </BorderPane.margin></Label>
+                     </BorderPane.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
                </top>
                <bottom>
                   <HBox prefHeight="62.0" prefWidth="700.0" BorderPane.alignment="CENTER">

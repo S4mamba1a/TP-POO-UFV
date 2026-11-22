@@ -201,25 +201,25 @@ public class ContratoRepository {
         return lista;
     }
 
-    public boolean existeContratoPendenteDoContratante(int idContratante) throws SQLException {
-        return existePendente("CONTRATANTE_id", idContratante);
+    public boolean existeContratoComContratante(int idContratante) throws SQLException {
+        return existeContrato("CONTRATANTE_id", idContratante);
     }
 
-    public boolean existeContratoPendenteDoCliente(int idCliente) throws SQLException {
-        return existePendente("CLIENTE_id", idCliente);
+    public boolean existeContratoComCliente(int idCliente) throws SQLException {
+        return existeContrato("CLIENTE_id", idCliente);
     }
 
-    public boolean existeContratoPendenteDoPalhaco(int idPalhaco) throws SQLException {
-        return existePendente("PALHACO_id", idPalhaco);
+    public boolean existeContratoComPalhaco(int idPalhaco) throws SQLException {
+        return existeContrato("PALHACO_id", idPalhaco);
     }
 
-    public boolean existeContratoPendenteComInstrumento(int idInstrumento) throws SQLException {
-        return existePendente("INSTRUMENTO_DE_RISADA_id", idInstrumento);
+    public boolean existeContratoComInstrumento(int idInstrumento) throws SQLException {
+        return existeContrato("INSTRUMENTO_DE_RISADA_id", idInstrumento);
     }
 
-    // confere se existe contrato PENDENTE na coluna informada (o nome da coluna vem só dos métodos acima)
-    private boolean existePendente(String coluna, int id) throws SQLException {
-        String sql = "SELECT COUNT(*) FROM CONTRATO WHERE " + coluna + " = ? AND status = 'PENDENTE'";
+    // confere se existe contrato na coluna informada (o nome da coluna vem só dos métodos acima)
+    private boolean existeContrato(String coluna, int id) throws SQLException {
+        String sql = "SELECT COUNT(*) FROM CONTRATO WHERE " + coluna + " = ?";
 
         try (Connection conn = ConexaoMySQL.obterConexao();
              PreparedStatement stmt = conn.prepareStatement(sql)) {

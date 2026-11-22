@@ -42,8 +42,8 @@ public class ClienteService {
     }
 
     public void remover(int id) throws ClienteEmUsoException, SQLException {
-        if (contratoRepository.existeContratoPendenteDoCliente(id)) {
-            throw new ClienteEmUsoException("O cliente possui contratos pendentes e não pode ser removido.");
+        if (contratoRepository.existeContratoComCliente(id)) {
+            throw new ClienteEmUsoException("O cliente está em contratos e não pode ser removido.");
         }
         clienteRepository.remover(id);
     }

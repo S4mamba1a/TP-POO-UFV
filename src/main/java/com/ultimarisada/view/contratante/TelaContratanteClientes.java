@@ -8,7 +8,6 @@ import com.ultimarisada.exceptions.ClienteJaCadastradoException;
 import com.ultimarisada.exceptions.ClienteSemContratanteException;
 import com.ultimarisada.model.Cliente;
 import com.ultimarisada.service.ClienteService;
-import com.ultimarisada.service.ContratanteService;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

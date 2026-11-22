@@ -22,8 +22,8 @@ public class PalhacoService {
     
     public void remover(int id) throws PalhacoEmUsoException, SQLException {
         // Lança exceção para impedir a exclusão se o palhaço tiver contratos pendentes
-        if(contratoRepository.existeContratoPendenteDoPalhaco(id)) {
-            throw new PalhacoEmUsoException("O palhaço possui contratos pendentes e não pode ser excluído.");
+        if(contratoRepository.existeContratoComPalhaco(id)) {
+            throw new PalhacoEmUsoException("O palhaço está em contratos e não pode ser removido.");
         }
         palhacoRepository.remover(id);
     }

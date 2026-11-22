@@ -20,8 +20,8 @@ public class InstrumentoService {
     }
 
     public void remover(int id) throws InstrumentoEmUsoException, SQLException {
-        if (contratoRepository.existeContratoPendenteComInstrumento(id)) {
-            throw new InstrumentoEmUsoException("Não é possível remover o instrumento, pois ele está vinculado a um contrato PENDENTE.");
+        if (contratoRepository.existeContratoComInstrumento(id)) {
+            throw new InstrumentoEmUsoException("O intrumento de risada está em contratos e não pode ser removido.");
         }
         instrumentoRepository.remover(id);
     }

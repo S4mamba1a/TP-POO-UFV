@@ -164,83 +164,83 @@ public class ContratoRepositoryTest {
 
     @Test
     @Order(7)
-    //Deve retornar true para a existencia de um contrato "PENDENTE" com determinado instrumento.
-    void testExisteContratoPendenteComInstrumentoTrue() throws SQLException{
+    //Deve retornar true para a existencia de um contrato com determinado instrumento.
+    void testExisteContratoComInstrumentoTrue() throws SQLException{
         Contrato contrato = new Contrato(dataFinal, status, contratante, cliente, palhaco, ins);
         contratoRepository.salvar(contrato);
-        assertTrue(contratoRepository.existeContratoPendenteComInstrumento(ins.getId()));
+        assertTrue(contratoRepository.existeContratoComInstrumento(ins.getId()));
     }
 
     @Test
     @Order(8)
-    //Deve retornar false para a existencia de um contrato "PENDENTE" com determinado instrumento.
-    void testExisteContratoPendenteComInstrumentoFalse() throws SQLException{
+    //Deve retornar false para a existencia de um contrato com determinado instrumento.
+    void testExisteContratoComInstrumentoFalse() throws SQLException{
         InstrumentoDeRisada ins2 = new InstrumentoDeRisada(700, "Buzina de Carro em Alta Velocidade", "Te mata de rir com tanto barulho!");
         instrumentoRepository.salvar(ins2, palhaco.getId());
         Contrato contrato = new Contrato(dataFinal, StatusContrato.PENDENTE, contratante, cliente, palhaco, ins2);
         contratoRepository.salvar(contrato);
-        assertFalse(contratoRepository.existeContratoPendenteComInstrumento(ins.getId()));
+        assertFalse(contratoRepository.existeContratoComInstrumento(ins.getId()));
     }
 
     @Test
     @Order(9)
-    //Deve retornar true para a existencia de um contrato "PENDENTE" com determinado cliente.
-    void testExisteContratoPendenteDoClienteTrue() throws SQLException{
+    //Deve retornar true para a existencia de um contrato com determinado cliente.
+    void testExisteContratoComClienteTrue() throws SQLException{
         Contrato contrato = new Contrato(dataFinal, status, contratante, cliente, palhaco, ins);
         contratoRepository.salvar(contrato);
-        assertTrue(contratoRepository.existeContratoPendenteDoCliente(cliente.getId()));
+        assertTrue(contratoRepository.existeContratoComCliente(cliente.getId()));
     }
 
     @Test
     @Order(10)
-    //Deve retornar false para a existencia de um contrato "PENDENTE" com determinado cliente.
-    void testExisteContratoPendenteDoClienteFalse() throws SQLException
+    //Deve retornar false para a existencia de um contrato com determinado cliente.
+    void testExisteContratoComClienteFalse() throws SQLException
     {   
         Cliente cliente2 = new Cliente("Samuel", dataFinal, "Homem alto de cabelo cacheado", "Rua Pipipipopopo, número 67", "Marte", contratante);
         clienteRepository.salvar(cliente2);
         Contrato contrato = new Contrato(dataFinal, status, contratante, cliente2, palhaco, ins);
         contratoRepository.salvar(contrato);
-        assertFalse(contratoRepository.existeContratoPendenteDoCliente(cliente.getId()));
+        assertFalse(contratoRepository.existeContratoComCliente(cliente.getId()));
     }
 
     @Test
     @Order(11)
-    //Deve retornar true para a existencia de um contrato "PENDENTE" com determinado contratante.
-    void testExisteContratoPendenteDoContratanteTrue() throws SQLException{
+    //Deve retornar true para a existencia de um contrato com determinado contratante.
+    void testExisteContratoComContratanteTrue() throws SQLException{
         Contrato contrato = new Contrato(dataFinal, status, contratante, cliente, palhaco, ins);
         contratoRepository.salvar(contrato);
-        assertTrue(contratoRepository.existeContratoPendenteDoContratante(contratante.getId()));
+        assertTrue(contratoRepository.existeContratoComContratante(contratante.getId()));
     }
 
     @Test
     @Order(12)
-    //Deve retornar false para a existencia de um contrato "PENDENTE" com determinado contratante.
-    void testExisteContratoPendenteDoContratanteFalse() throws SQLException{
+    //Deve retornar false para a existencia de um contrato com determinado contratante.
+    void testExisteContratoComContratanteFalse() throws SQLException{
         Contratante contratante2 = new Contratante("Almiro", LocalDate.now(), "1234");
         contratanteRepository.salvar(contratante2);
         Contrato contrato = new Contrato(dataFinal, status, contratante2, cliente, palhaco, ins);
         contratoRepository.salvar(contrato);
-        assertFalse(contratoRepository.existeContratoPendenteDoContratante(contratante.getId()));
+        assertFalse(contratoRepository.existeContratoComContratante(contratante.getId()));
     }
 
     @Test
     @Order(13)
-    //Deve retornar true para a existencia de um contrato "PENDENTE" com determinado palhaço.
-    void testExisteContratoPendenteDoPalhacoTrue() throws SQLException{
+    //Deve retornar true para a existencia de um contrato com determinado palhaço.
+    void testExisteContratoComPalhacoTrue() throws SQLException{
         Contrato contrato = new Contrato(dataFinal, status, contratante, cliente, palhaco, ins);
         contratoRepository.salvar(contrato);
-        assertTrue(contratoRepository.existeContratoPendenteDoPalhaco(palhaco.getId()));
+        assertTrue(contratoRepository.existeContratoComPalhaco(palhaco.getId()));
     }
 
     @Test
     @Order(14)
-    //Deve retornar false para a existencia de um contrato "PENDENTE" com determinado palhaço.
-    void testExisteContratoPendenteDoPalhacoFalse() throws SQLException{
+    //Deve retornar false para a existencia de um contrato com determinado palhaço.
+    void testExisteContratoComPalhacoFalse() throws SQLException{
         Palhaco palhaco2 = new Palhaco("Robertinho", LocalDate.now(), "Explosivo", 9000);
         palhacoRepository.salvar(palhaco2);
         Contrato contrato = new Contrato(dataFinal, status, contratante, cliente, palhaco2, ins);
         contratoRepository.salvar(contrato);
-        assertFalse(contratoRepository.existeContratoPendenteDoPalhaco(palhaco.getId()));
+        assertFalse(contratoRepository.existeContratoComPalhaco(palhaco.getId()));
     }
 
     @Test
