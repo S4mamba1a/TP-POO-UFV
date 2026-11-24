@@ -109,7 +109,7 @@ public class ContratoRepositoryTest {
         contrato.setInstrumento(ins2);
 
         contrato.setAvaliacao(new Avaliacao(5, "Serviço muito bom!"));
-        contrato.setStatus(StatusContrato.CANCELADA);
+        contrato.setStatus(StatusContrato.CANCELADO);
 
         contratoRepository.atualizar(contrato);
         Contrato contratoBuscado = contratoRepository.buscarPorId(contrato.getId());
@@ -129,9 +129,9 @@ public class ContratoRepositoryTest {
     void testAtualizarStatus() throws SQLException{
         Contrato contrato = new Contrato(dataFinal, status, contratante, cliente, palhaco, ins);
         contratoRepository.salvar(contrato);
-        contratoRepository.atualizarStatus(contrato.getId(), StatusContrato.REALIZADA);
+        contratoRepository.atualizarStatus(contrato.getId(), StatusContrato.REALIZADO);
         Contrato contratoBuscado = contratoRepository.buscarPorId(contrato.getId());
-        assertEquals(StatusContrato.REALIZADA, contratoBuscado.getStatus());
+        assertEquals(StatusContrato.REALIZADO, contratoBuscado.getStatus());
     }
 
     @Test

@@ -122,7 +122,7 @@ public class TelaFirmaContratos {
             @Override public InstrumentoDeRisada fromString(String s) { return null; }
         });
 
-        comboNovoStatus.getItems().setAll(StatusContrato.REALIZADA, StatusContrato.CANCELADA);
+        comboNovoStatus.getItems().setAll(StatusContrato.REALIZADO, StatusContrato.CANCELADO);
         comboFiltroStatus.getItems().setAll(StatusContrato.values());
 
         colunaId.setCellValueFactory(new PropertyValueFactory<>("id"));

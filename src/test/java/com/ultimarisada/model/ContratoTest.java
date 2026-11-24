@@ -140,7 +140,7 @@ public class ContratoTest {
     @Test
     @Order(16)
     void testSetStatus() {
-        StatusContrato s = StatusContrato.CANCELADA; 
+        StatusContrato s = StatusContrato.CANCELADO; 
         contrato.setStatus(s);
         assertEquals(s, contrato.getStatus());
     }

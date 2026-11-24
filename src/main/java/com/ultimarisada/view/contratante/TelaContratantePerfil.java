@@ -109,8 +109,8 @@ public class TelaContratantePerfil {
             botaoAvaliar.setDisable(true);
             return;
         }
-        boolean statusPermite = novo.getStatus() == StatusContrato.REALIZADA
-                || novo.getStatus() == StatusContrato.CANCELADA;
+        boolean statusPermite = novo.getStatus() == StatusContrato.REALIZADO
+                || novo.getStatus() == StatusContrato.CANCELADO;
         boolean semAvaliacao = novo.getAvaliacao() == null;
         botaoAvaliar.setDisable(!(statusPermite && semAvaliacao));
     }

@@ -259,7 +259,7 @@ public class ContratoServiceTest {
         Avaliacao avaliacaoOriginal = new Avaliacao(1, 5, "Serviço muito bom!");
         LocalDate novaData = LocalDate.of(2026, 12, 1);
 
-        Contrato contrato = new Contrato(1, dataFinal, StatusContrato.REALIZADA, contratante, cliente, palhaco, ins, avaliacaoOriginal);
+        Contrato contrato = new Contrato(1, dataFinal, StatusContrato.REALIZADO, contratante, cliente, palhaco, ins, avaliacaoOriginal);
         when(contratoRepository.buscarPorId(1)).thenReturn(contrato);
         when(contratanteRepository.buscarPorId(2)).thenReturn(contratante2);
         when(clienteRepository.buscarPorId(2)).thenReturn(cliente2);
@@ -273,7 +273,7 @@ public class ContratoServiceTest {
         assertEquals(cliente2.getId(), contrato.getCliente().getId());
         assertEquals(palhaco2.getId(), contrato.getPalhaco().getId());
         assertEquals(ins2.getId(), contrato.getInstrumento().getId());
-        assertEquals(StatusContrato.REALIZADA, contrato.getStatus());
+        assertEquals(StatusContrato.REALIZADO, contrato.getStatus());
         assertEquals(avaliacaoOriginal, contrato.getAvaliacao());
         verify(contratoRepository, times(1)).atualizar(contrato);
     }
@@ -319,8 +319,8 @@ public class ContratoServiceTest {
         Contrato contrato = new Contrato(1, dataFinal, status, contratante, cliente, palhaco, ins, null);
         when(contratoRepository.buscarPorId(1)).thenReturn(contrato);
 
-        service.atualizarStatus(1, StatusContrato.REALIZADA);
-        verify(contratoRepository, times(1)).atualizarStatus(1, StatusContrato.REALIZADA);
+        service.atualizarStatus(1, StatusContrato.REALIZADO);
+        verify(contratoRepository, times(1)).atualizarStatus(1, StatusContrato.REALIZADO);
     }
 
     @Test
@@ -329,7 +329,7 @@ public class ContratoServiceTest {
     void testAtualizarStatusContratoNaoEncontrado() throws Exception {
         when(contratoRepository.buscarPorId(99)).thenReturn(null);
 
-        assertThrows(OperacaoNaoPermitidaException.class, () -> service.atualizarStatus(99, StatusContrato.CANCELADA));
+        assertThrows(OperacaoNaoPermitidaException.class, () -> service.atualizarStatus(99, StatusContrato.CANCELADO));
         verify(contratoRepository, never()).atualizarStatus(eq(99), any());
     }
 
@@ -337,10 +337,10 @@ public class ContratoServiceTest {
     @Order(22)
     //Deve lançar OperacaoNaoPermitidaException ao tentar atualizar status de um contrato que não está PENDENTE.
     void testAtualizarStatusContratoNaoPendente() throws Exception {
-        Contrato contratoRealizado = new Contrato(2, dataFinal, StatusContrato.REALIZADA, contratante, cliente, palhaco, ins, null);
+        Contrato contratoRealizado = new Contrato(2, dataFinal, StatusContrato.REALIZADO, contratante, cliente, palhaco, ins, null);
         when(contratoRepository.buscarPorId(2)).thenReturn(contratoRealizado);
 
-        assertThrows(OperacaoNaoPermitidaException.class, () -> service.atualizarStatus(2, StatusContrato.CANCELADA));
+        assertThrows(OperacaoNaoPermitidaException.class, () -> service.atualizarStatus(2, StatusContrato.CANCELADO));
         verify(contratoRepository, never()).atualizarStatus(anyInt(), any());
     }
 
@@ -350,7 +350,7 @@ public class ContratoServiceTest {
     void testAtualizarStatusSqlException() throws Exception {
         when(contratoRepository.buscarPorId(3)).thenThrow(new SQLException("Falha no banco"));
 
-        assertThrows(SQLException.class, () -> service.atualizarStatus(3, StatusContrato.REALIZADA));
+        assertThrows(SQLException.class, () -> service.atualizarStatus(3, StatusContrato.REALIZADO));
     }
 
     @Test
