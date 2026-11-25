@@ -3,6 +3,7 @@ package com.ultimarisada.service;
 import com.ultimarisada.model.Palhaco;
 import com.ultimarisada.repository.PalhacoRepository;
 import com.ultimarisada.repository.ContratoRepository;
+import com.ultimarisada.exceptions.MenorDeIdadeException;
 import com.ultimarisada.exceptions.PalhacoEmUsoException;
 
 import java.sql.SQLException;
@@ -12,11 +13,17 @@ public class PalhacoService {
     private PalhacoRepository palhacoRepository = new PalhacoRepository();
     private ContratoRepository contratoRepository = new ContratoRepository();
     
-    public void cadastrar(Palhaco p) throws SQLException {
+    public void cadastrar(Palhaco p) throws MenorDeIdadeException, SQLException {
+        if(p.calcularIdade() < 18){
+            throw new MenorDeIdadeException("O palhaço precisa ser maior de idade.");
+        }
         palhacoRepository.salvar(p);
     }
 
-    public void editar(Palhaco p) throws SQLException{
+    public void editar(Palhaco p) throws MenorDeIdadeException, SQLException{
+        if(p.calcularIdade() < 18){
+            throw new MenorDeIdadeException("O palhaço precisa ser maior de idade.");
+        }
         palhacoRepository.atualizar(p);
     }
     

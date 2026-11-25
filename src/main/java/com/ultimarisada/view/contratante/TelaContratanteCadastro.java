@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 
 import com.ultimarisada.exceptions.ContratanteJaCadastradoException;
+import com.ultimarisada.exceptions.MenorDeIdadeException;
 import com.ultimarisada.model.Contratante;
 import com.ultimarisada.service.ContratanteService;
 
@@ -73,6 +74,8 @@ public class TelaContratanteCadastro {
             errado(e.getMessage());
         } catch (SQLException e) {
             errado("Erro ao acessar o banco de dados. Tente novamente.");
+        } catch (MenorDeIdadeException e) {
+            errado(e.getMessage());
         }
     }
     @FXML

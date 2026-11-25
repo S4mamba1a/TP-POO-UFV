@@ -6,6 +6,7 @@ import java.time.LocalDate;
 
 import com.ultimarisada.exceptions.ClienteJaCadastradoException;
 import com.ultimarisada.exceptions.ClienteSemContratanteException;
+import com.ultimarisada.exceptions.MenorDeIdadeException;
 import com.ultimarisada.model.Cliente;
 import com.ultimarisada.service.ClienteService;
 
@@ -91,6 +92,8 @@ public class TelaContratanteClientes {
             carregarMeusClientes();
             limparFormulario();
         } catch (ClienteJaCadastradoException e) {
+            exibirErro(e.getMessage());
+        } catch (MenorDeIdadeException e) {
             exibirErro(e.getMessage());
         } catch (ClienteSemContratanteException e) {
             exibirErro(e.getMessage());

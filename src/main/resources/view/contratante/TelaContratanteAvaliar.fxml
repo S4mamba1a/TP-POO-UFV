@@ -48,26 +48,26 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <GridPane hgap="10.0" layoutX="232.0" layoutY="129.0" prefHeight="267.0" prefWidth="534.0" vgap="20.0">
+            <GridPane hgap="10.0" layoutX="179.0" layoutY="147.0" prefHeight="267.0" prefWidth="642.0" vgap="20.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.20001220703125" minWidth="10.0" prefWidth="79.80003356933594" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.19996643066406" minWidth="10.0" prefWidth="431.19996643066406" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.20001220703125" minWidth="10.0" prefWidth="131.3589880527594" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="586.6667167467948" minWidth="10.0" prefWidth="502.2307555369842" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="107.19998168945312" minHeight="10.0" prefHeight="31.30768448267228" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="118.4000228881836" minHeight="10.0" prefHeight="59.20513603014823" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="107.19998168945312" minHeight="10.0" prefHeight="31.102569580078125" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="118.4000228881836" minHeight="10.0" prefHeight="50.79486631735777" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="188.8" minHeight="10.0" prefHeight="151.1999938964844" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Label prefHeight="34.0" prefWidth="252.0" text="Contrato:" />
-                  <Label fx:id="rotuloResumo" prefHeight="27.0" prefWidth="462.0" text="Resumo do Contrato" GridPane.columnIndex="1" />
+                  <Label fx:id="rotuloResumo" prefHeight="27.0" prefWidth="587.0" text="Resumo do Contrato" GridPane.columnIndex="1" />
                   <Label prefHeight="34.0" prefWidth="85.0" text="Nota (1 a 5):" GridPane.rowIndex="1" />
-                  <TextField fx:id="campoValor" prefHeight="34.0" prefWidth="423.0" text="Digite Nota" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <TextField fx:id="campoValor" prefHeight="34.0" prefWidth="423.0" promptText="Digite Nota" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets right="250.0" />
                      </GridPane.margin></TextField>
                   <Label prefHeight="34.0" prefWidth="91.0" text="Comentário:" GridPane.rowIndex="2" />
-                  <TextArea fx:id="campoDescricao" prefHeight="142.0" prefWidth="431.0" text="Deixe um Comentário" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextArea fx:id="campoDescricao" prefHeight="150.0" prefWidth="289.0" promptText="Deixe um Comentário" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <HBox layoutX="244.0" layoutY="496.0" prefHeight="27.0" prefWidth="511.0" spacing="80.0">

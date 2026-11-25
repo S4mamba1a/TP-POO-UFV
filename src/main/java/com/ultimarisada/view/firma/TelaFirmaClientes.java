@@ -8,6 +8,7 @@ import java.util.Optional;
 import com.ultimarisada.exceptions.ClienteEmUsoException;
 import com.ultimarisada.exceptions.ClienteJaCadastradoException;
 import com.ultimarisada.exceptions.ClienteSemContratanteException;
+import com.ultimarisada.exceptions.MenorDeIdadeException;
 import com.ultimarisada.model.Cliente;
 import com.ultimarisada.model.Contratante;
 import com.ultimarisada.service.ClienteService;
@@ -176,6 +177,9 @@ public class TelaFirmaClientes {
             // FA1: mostra a mensagem e mantém o formulário preenchido
             exibirErro(e.getMessage());
         } catch (ClienteSemContratanteException e) {
+            // FA2: mostra a mensagem e mantém o formulário preenchido
+            exibirErro(e.getMessage());
+        } catch (MenorDeIdadeException e) {
             // FA2: mostra a mensagem e mantém o formulário preenchido
             exibirErro(e.getMessage());
         } catch (SQLException e) {

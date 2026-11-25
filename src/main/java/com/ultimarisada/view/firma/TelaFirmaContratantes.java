@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import com.ultimarisada.exceptions.ContratanteEmUsoException;
 import com.ultimarisada.exceptions.ContratanteJaCadastradoException;
+import com.ultimarisada.exceptions.MenorDeIdadeException;
 import com.ultimarisada.model.Contratante;
 import com.ultimarisada.service.ContratanteService;
 
@@ -113,6 +114,8 @@ public class TelaFirmaContratantes {
             carregarLista();
             onNovoClicado();
         } catch (ContratanteJaCadastradoException e) {
+            exibirErro(e.getMessage());
+        } catch (MenorDeIdadeException e) {
             exibirErro(e.getMessage());
         } catch (SQLException e) {
             exibirErro("Erro ao acessar o banco de dados. Tente novamente.");

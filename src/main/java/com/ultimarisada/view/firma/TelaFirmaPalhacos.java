@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
+import com.ultimarisada.exceptions.MenorDeIdadeException;
 import com.ultimarisada.exceptions.PalhacoEmUsoException;
 import com.ultimarisada.model.Palhaco;
 import com.ultimarisada.service.PalhacoService;
@@ -169,7 +170,9 @@ public class TelaFirmaPalhacos {
             }
             carregarLista();
             onNovoClicado();
-        } catch (SQLException e) {
+        } catch (MenorDeIdadeException e) {
+            exibirErro(e.getMessage());
+        }catch (SQLException e) {
             exibirErro("Erro ao acessar o banco de dados. Tente novamente.");
         }
     }

@@ -1,6 +1,7 @@
 package com.ultimarisada.model;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public abstract class Pessoa {
     private int id;
@@ -40,6 +41,10 @@ public abstract class Pessoa {
         this.dataNascimento = dataNascimento;
     }
     
+    public int calcularIdade(){
+        return Period.between(dataNascimento, LocalDate.now()).getYears();
+    }
+
     //toString
     public abstract String exibirResumo();
 }
