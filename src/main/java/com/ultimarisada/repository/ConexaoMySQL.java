@@ -5,9 +5,8 @@ import java.sql.SQLException;
 
 public class ConexaoMySQL{
     private static final String URL = "jdbc:mysql://localhost:3306/ultimarisada?useSSL=false&serverTimezone=UTC";
-    private static final String USER = "root";
-    private static final String PASSWORD = "Mysql@2026";
-
+    private static final String USER = "usuario_java";
+    private static final String PASSWORD = "senha_provisoria";
     public static Connection obterConexao() throws SQLException{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
