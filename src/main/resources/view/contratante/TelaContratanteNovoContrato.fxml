@@ -31,7 +31,7 @@
                   <Label prefHeight="34.0" prefWidth="125.0" text="Cliente:" />
                   <Label prefHeight="34.0" prefWidth="125.0" text="Palhaço:" GridPane.rowIndex="1" />
                   <Label prefHeight="34.0" prefWidth="182.0" text="Instrumento:" GridPane.rowIndex="2" />
-                  <Label prefHeight="34.0" prefWidth="163.0" text="Prazo final do contrato:" GridPane.rowIndex="3" />
+                  <Label prefHeight="34.0" text="Prazo final:" GridPane.rowIndex="3" />
                   <Label prefHeight="30.0" prefWidth="192.0" text="Valor total:" GridPane.rowIndex="4" />
                   <ComboBox fx:id="comboCliente" prefHeight="34.0" prefWidth="236.0" promptText="Escolha o Cliente" GridPane.columnIndex="1" />
                   <ComboBox fx:id="comboPalhaco" onAction="#onPalhacoSelecionado" prefHeight="34.0" prefWidth="236.0" promptText="Escolha o Palhaço" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -40,12 +40,12 @@
                   <DatePicker fx:id="campoDataFinal" prefHeight="34.0" prefWidth="236.0" promptText="Escolha a Data" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
             </GridPane>
-            <HBox layoutX="226.0" layoutY="493.0" prefHeight="30.0" prefWidth="598.0" spacing="55.0">
+            <HBox layoutX="226.0" layoutY="493.0" prefHeight="80.0" prefWidth="598.0" spacing="10.0">
                <children>
-                  <Button fx:id="botaoVerPerfil" mnemonicParsing="false" onAction="#onVerPerfilPalhacoClicado" prefHeight="30.0" prefWidth="155.0" text="Ver Perfil do Palhaço" />
-                  <Button fx:id="botaoNovoCliente" mnemonicParsing="false" onAction="#onNovoClienteClicado" prefHeight="30.0" prefWidth="108.0" text="Novo Cliente" />
-                  <Button fx:id="botaoConfirmar" mnemonicParsing="false" onAction="#onConfirmarClicado" prefHeight="30.0" prefWidth="95.0" text="Confirmar" />
-                  <Button fx:id="botaoVoltar" mnemonicParsing="false" onAction="#onVoltarClicado" prefHeight="30.0" prefWidth="94.0" text="Voltar" />
+                  <Button fx:id="botaoVerPerfil" mnemonicParsing="false" onAction="#onVerPerfilPalhacoClicado" text="Ver Perfil do Palhaço" />
+                  <Button fx:id="botaoNovoCliente" mnemonicParsing="false" onAction="#onNovoClienteClicado" text="Novo Cliente" />
+                  <Button fx:id="botaoConfirmar" mnemonicParsing="false" onAction="#onConfirmarClicado" text="Confirmar" />
+                  <Button fx:id="botaoVoltar" mnemonicParsing="false" onAction="#onVoltarClicado" text="Voltar" />
                </children>
             </HBox>
          </children>

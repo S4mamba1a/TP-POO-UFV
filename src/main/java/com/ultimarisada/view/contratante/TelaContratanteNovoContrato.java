@@ -60,6 +60,7 @@ public class TelaContratanteNovoContrato {
             loader.setController(this);
             Parent raiz = loader.load();
             stage.setScene(new Scene(raiz));
+            raiz.getStylesheets().add(getClass().getResource("/view/css/estiloPadrao.css").toExternalForm());
             stage.setTitle("Contratante — Novo Contrato");
             stage.sizeToScene();
             stage.show();

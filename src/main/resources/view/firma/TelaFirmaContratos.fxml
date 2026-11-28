@@ -74,14 +74,14 @@
    <center>
       <TableView fx:id="tabelaContratos" BorderPane.alignment="CENTER">
          <columns>
-            <TableColumn fx:id="colunaId" prefWidth="50.0" text="ID" />
-            <TableColumn fx:id="colunaContratante" prefWidth="180.0" text="Contratante" />
-            <TableColumn fx:id="colunaCliente" prefWidth="130.0" text="Cliente" />
-            <TableColumn fx:id="colunaPalhaco" prefWidth="140.0" text="Palhaço" />
-            <TableColumn fx:id="colunaInstrumento" prefWidth="134.0" text="Instrumento" />
-            <TableColumn fx:id="colunaDataFinal" prefWidth="80.0" text="Data final" />
-            <TableColumn fx:id="colunaStatus" prefWidth="75.0" text="Status" />
-            <TableColumn fx:id="colunaValorTotal" prefWidth="75.0" text="Valor Total" />
+            <TableColumn fx:id="colunaId" text="ID" />
+            <TableColumn fx:id="colunaContratante" text="Contratante" />
+            <TableColumn fx:id="colunaCliente" text="Cliente" />
+            <TableColumn fx:id="colunaPalhaco" text="Palhaço" />
+            <TableColumn fx:id="colunaInstrumento" text="Instrumento" />
+            <TableColumn fx:id="colunaDataFinal" text="Data final" />
+            <TableColumn fx:id="colunaStatus" text="Status" />
+            <TableColumn fx:id="colunaValorTotal" text="Valor Total" />
          </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

@@ -21,6 +21,7 @@ public class TelaInicial {
         loader.setController(this);
         Parent root = loader.load();
         stage.setScene(new Scene(root));
+        root.getStylesheets().add(getClass().getResource("/view/css/estiloPadrao.css").toExternalForm());
         stage.setTitle("A Última Risada");
         stage.sizeToScene();
         stage.show();

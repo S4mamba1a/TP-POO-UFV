@@ -64,6 +64,7 @@ public class TelaContratantePerfilPalhaco {
             dialogo.initOwner(donoStage);
             dialogo.initModality(Modality.APPLICATION_MODAL);
             dialogo.setScene(new Scene(raiz));
+            raiz.getStylesheets().add(getClass().getResource("/view/css/estiloPadrao.css").toExternalForm());
             dialogo.setTitle("Perfil do palhaço");
             dialogo.showAndWait();
         } catch (IOException e) {

@@ -53,6 +53,7 @@ public class TelaContratanteClientes {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/contratante/TelaContratanteClientes.fxml"));
             loader.setController(this);
             Parent raiz = loader.load();
+            raiz.getStylesheets().add(getClass().getResource("/view/css/estiloPadrao.css").toExternalForm());
             stage.setScene(new Scene(raiz));
             stage.setTitle("Contratante — Meus Clientes");
             stage.sizeToScene();

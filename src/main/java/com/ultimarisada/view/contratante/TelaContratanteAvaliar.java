@@ -49,6 +49,7 @@ public class TelaContratanteAvaliar {
             loader.setController(this);
             Parent raiz = loader.load();
             dialogo = new Stage();
+            raiz.getStylesheets().add(getClass().getResource("/view/css/estiloPadrao.css").toExternalForm());
             dialogo.initOwner(donoStage);
             dialogo.initModality(Modality.APPLICATION_MODAL);
             dialogo.setScene(new Scene(raiz));

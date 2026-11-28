@@ -46,67 +46,33 @@
 
 <VBox alignment="CENTER" prefHeight="620" prefWidth="1000" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="272.0">
+  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity">
+   <children>
+      <Label styleClass="titulo" text="Cadastro">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Label>
+      <GridPane hgap="10.0" vgap="12.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="-Infinity" />
+            <ColumnConstraints hgrow="NEVER" minWidth="200.0" prefWidth="200.0" />
+         </columnConstraints>
          <children>
-            <Label contentDisplay="CENTER" text="Cadastro">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
-            </Label>
-            <GridPane prefHeight="142.0" prefWidth="210.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Label prefHeight="18.0" prefWidth="113.0" text="Nome:">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label prefHeight="18.0" prefWidth="100.0" text="Senha:" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <TextField fx:id="campoNome" GridPane.columnIndex="1">
-                     <GridPane.margin>
-                        <Insets left="5.0" />
-                     </GridPane.margin>
-                  </TextField>
-                  <Button mnemonicParsing="false" onAction="#onCancelarClicado" prefHeight="26.0" prefWidth="103.0" text="Cancelar" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#onConfirmarClicado" prefHeight="26.0" prefWidth="114.0" text="Confirmar" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="5.0" />
-                     </GridPane.margin>
-                  </Button>
-                  <PasswordField fx:id="campoSenha" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets left="5.0" />
-                     </GridPane.margin>
-                  </PasswordField>
-                  <Label text="Data de Nascimento:" GridPane.rowIndex="2" />
-                  <DatePicker fx:id="campoDataNascimento" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets left="5.0" />
-                     </GridPane.margin>
-                  </DatePicker>
-               </children>
-            </GridPane>
+            <Label text="Nome:" />
+            <TextField fx:id="campoNome" GridPane.columnIndex="1" />
+
+            <Label text="Senha:" GridPane.rowIndex="1" />
+            <PasswordField fx:id="campoSenha" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Data de Nascimento:" GridPane.rowIndex="2" />
+            <DatePicker fx:id="campoDataNascimento" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Button mnemonicParsing="false" onAction="#onCancelarClicado" text="Cancelar" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#onConfirmarClicado" text="Confirmar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
-      </VBox>
+      </GridPane>
+   </children>
+</VBox>
   </children>
 </VBox>

@@ -53,6 +53,7 @@ public class TelaFirmaContratantes {
             loader.setController(this);
             Parent raiz = loader.load();
             stage.setScene(new Scene(raiz));
+            raiz.getStylesheets().add(getClass().getResource("/view/css/estiloPadrao.css").toExternalForm());
             stage.setTitle("Gerenciador de Contratantes");
             stage.sizeToScene();
             stage.show();

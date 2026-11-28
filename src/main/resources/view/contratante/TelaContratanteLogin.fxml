@@ -49,14 +49,14 @@
          <children>
             <Button mnemonicParsing="false" onAction="#onVoltarClicado" text="Voltar">
                <VBox.margin>
-                  <Insets left="10.0" top="10.0" />
+                  <Insets left="10.0" top="25.0" />
                </VBox.margin>
             </Button>
          </children>
       </VBox>
       <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="272.0">
          <children>
-            <Label contentDisplay="CENTER" text="Login do Contratante">
+            <Label contentDisplay="CENTER" styleClass="titulo" text="Login">
                <font>
                   <Font size="18.0" />
                </font>
@@ -89,6 +89,7 @@
                   <TextField fx:id="campoNome" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets left="5.0" />
+                        <Insets bottom="10.0" />
                      </GridPane.margin>
                   </TextField>
                   <Button mnemonicParsing="false" onAction="#onEntrarClicado" prefHeight="26.0" prefWidth="103.0" text="Entrar" GridPane.rowIndex="3">
@@ -96,7 +97,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#onCadastrarSeClicado" prefHeight="26.0" prefWidth="114.0" text="Cadastrar-se" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <Button mnemonicParsing="false" onAction="#onCadastrarSeClicado"  minWidth="-Infinity" maxWidth="-Infinity"  text="Cadastrar-se" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="5.0" />
                      </GridPane.margin>
@@ -104,6 +105,7 @@
                   <PasswordField fx:id="campoSenha" onAction="#onEntrarClicado" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="5.0" />
+                        <Insets top="10.0" />
                      </GridPane.margin>
                   </PasswordField>
                </children>

@@ -7,15 +7,15 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620" prefWidth="1000" spacing="12.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="rotuloBoasVindas" text="Menu">
+      <Label fx:id="rotuloBoasVindas" styleClass="titulo" text="Menu">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Button mnemonicParsing="false" onAction="#onPerfilClicado" prefWidth="150.0" text="Meu Perfil" />
-      <Button mnemonicParsing="false" onAction="#onClientesClicado" prefWidth="150.0" text="Meus Clientes" />
-      <Button mnemonicParsing="false" onAction="#onNovoContratoClicado" prefWidth="150.0" text="Novo Contrato" />
-      <Button mnemonicParsing="false" onAction="#onVerPalhacosClicado" prefWidth="150.0" text="Ver Palhaços " />
-      <Button mnemonicParsing="false" onAction="#onSairClicado" prefWidth="150.0" text="Sair" />
+      <Button mnemonicParsing="false" onAction="#onPerfilClicado" prefWidth="200.0" text="Meu Perfil" />
+      <Button mnemonicParsing="false" onAction="#onClientesClicado" prefWidth="200.0" text="Meus Clientes" />
+      <Button mnemonicParsing="false" onAction="#onNovoContratoClicado" prefWidth="200.0" text="Novo Contrato" />
+      <Button mnemonicParsing="false" onAction="#onVerPalhacosClicado" prefWidth="200.0" text="Ver Palhaços " />
+      <Button mnemonicParsing="false" onAction="#onSairClicado" prefWidth="200.0" text="Sair" />
    </children>
 </VBox>

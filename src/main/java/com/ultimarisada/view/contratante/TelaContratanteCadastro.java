@@ -34,6 +34,7 @@ public class TelaContratanteCadastro {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/contratante/TelaContratanteCadastro.fxml"));
         loader.setController(this);
         Parent root = loader.load();
+        root.getStylesheets().add(getClass().getResource("/view/css/estiloPadrao.css").toExternalForm());
         stage.setScene(new Scene(root));
         stage.setTitle("Cadastro do Contratante");
         stage.sizeToScene();

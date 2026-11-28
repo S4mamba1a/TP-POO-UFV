@@ -36,6 +36,7 @@ public class TelaContratanteLogin {
             loader.setController(this);
             Parent root = loader.load();
             stage.setScene(new Scene(root));
+            root.getStylesheets().add(getClass().getResource("/view/css/estiloPadrao.css").toExternalForm());
             stage.setTitle("Login do Contratante");
             stage.show();
         } catch (IOException e) {

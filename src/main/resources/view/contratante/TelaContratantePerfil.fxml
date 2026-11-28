@@ -49,7 +49,7 @@
          <children>
             <BorderPane layoutX="150.0" layoutY="62.0" prefHeight="495.0" prefWidth="700.0">
                <top>
-                  <Label fx:id="rotuloContratante" alignment="CENTER" prefHeight="35.0" prefWidth="339.0" text="Nome do Contratante" BorderPane.alignment="CENTER">
+                  <Label fx:id="rotuloContratante" styleClass="titulo" alignment="CENTER" text="Nome do Contratante" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets bottom="10.0" />
                      </BorderPane.margin>
@@ -76,13 +76,16 @@
                   <TableView fx:id="tabelaContratos" prefHeight="387.0" prefWidth="700.0" BorderPane.alignment="CENTER">
                     <columns>
                       <TableColumn fx:id="colunaId" prefWidth="55.20001220703125" text="Id" />
-                      <TableColumn fx:id="colunaCliente" prefWidth="129.6000213623047" text="Cliente" />
+                      <TableColumn fx:id="colunaCliente" prefWidth="119.6000213623047" text="Cliente" />
                         <TableColumn fx:id="colunaPalhaco" prefWidth="115.20001220703125" text="Palhaço" />
                         <TableColumn fx:id="colunaInstrumento" prefWidth="127.99993896484375" text="Instrumento" />
                         <TableColumn fx:id="colunaStatus" prefWidth="100.0" text="Status" />
-                        <TableColumn fx:id="colunaValorTotal" prefWidth="84.7999267578125" text="Valor Total" />
+                        <TableColumn fx:id="colunaValorTotal" prefWidth="100.0" text="Valor Total" />
                         <TableColumn fx:id="colunaNota" prefWidth="88.00006103515625" text="Nota" />
                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
                   </TableView>
                </center>
             </BorderPane>
